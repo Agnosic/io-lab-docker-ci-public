@@ -18,6 +18,9 @@ services:
   redis:
     image: redis:6.0-rc4-alpine
     volumes:
-      - .:/data
+      - redis-data:/data
+
+volumes:
+  redis-data:
     # TODO: missing persistence for redis. You need to persist /data directory.
 
