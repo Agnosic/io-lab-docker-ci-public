@@ -6,6 +6,8 @@ services:
     image: "ilczuk/io-lab-docker-ci-public"
     ports:
       - "80:5000"
+    depends_on:
+      - redis
     environment:
       REDIS_HOST: redis
       REDIS_PORT: 6379
